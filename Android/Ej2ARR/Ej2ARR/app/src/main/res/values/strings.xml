@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ej2ARR</string>
+    <string name="prompt_user">Usuario</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">LOGIN</string>
+    <string name="title_activity_list">ListActivity</string>
+</resources>

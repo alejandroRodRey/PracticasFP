@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    android:paddingLeft="15dp"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
+    tools:context=".ItemActivity">
+
+    <TableLayout
+        android:id="@+id/CompassMap"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/border1"
+        android:gravity="center"
+        android:stretchColumns="1"
+        android:paddingRight="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/nombreLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:padding="15dp"
+                android:text="Nombre"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:selectAllOnFocus="true"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/descripcionLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:padding="15dp"
+                android:text="Descripción"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:selectAllOnFocus="true"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/precioLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:padding="15dp"
+                android:text="Precio"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/precio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:selectAllOnFocus="true"
+                android:textColor="#ffffff"
+                android:textSize="13dp" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/monedaLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:editable="false"
+                android:padding="15dp"
+                android:text="Moneda"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+            <Spinner
+                android:id="@+id/moneda"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dp"
+                android:backgroundTint="@color/cardview_shadow_end_color"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/aceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/border1"
+        android:enabled="true"
+        android:text="ACEPTAR"
+        android:onClick="updateItem"
+        android:textColor="#ffffff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CompassMap" />
+
+    <Button
+        android:id="@+id/cancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/border1"
+        android:enabled="true"
+        android:text="CANCELAR"
+        android:onClick="exitItem"
+        android:textColor="#ffffff"
+        app:layout_constraintLeft_toRightOf="@id/aceptar"
+        app:layout_constraintRight_toLeftOf="@id/eliminar"
+        app:layout_constraintTop_toBottomOf="@id/CompassMap" />
+
+    <Button
+        android:id="@+id/eliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/border1"
+        android:enabled="true"
+        android:text="ELIMINAR"
+        android:onClick="removeItem"
+        android:textColor="#ffffff"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/CompassMap" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
